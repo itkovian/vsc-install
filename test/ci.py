@@ -576,6 +576,8 @@ class CITest(TestCase):
             newtxt = "\n".join([f"vsc-install{suff}", "    mv setup.cfg.moved setup.cfg", ""])
             expected_tox_ini = expected_tox_ini.replace(f"vsc-install{suff}\n", newtxt)
 
+        expected_tox_ini += "allowlist_externals = mv\n"
+
         self.assertEqual(gen_tox_ini(), expected_tox_ini)
 
     def test_pip_install_test_deps(self):

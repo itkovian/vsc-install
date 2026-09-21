@@ -391,6 +391,8 @@ def gen_tox_ini():
         "passenv = USER",
     ])
 
+    if vsc_ci_cfg[MOVE_SETUP_CFG]:
+        lines.append("allowlist_externals = mv")
 
     if vsc_ci_cfg[INHERIT_SITE_PACKAGES]:
         # inherit Python packages installed on the system, if requested
