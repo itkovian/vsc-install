@@ -52,7 +52,6 @@ from vsc.install.ci import (
     JENKINSFILE,
     RUFF_TOML,
     TOX_INI,
-    UV_BASED,
     gen_github_action,
     gen_jenkinsfile,
     gen_ruff_toml,
