@@ -41,3 +41,10 @@ only-include = ["src/vsc/install"]
 
 [tool.uv]
 # uv-specific config if you ever want it (optional)
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = ["*.py"]
+norecursedirs = ["test/headers", "test/prospectortest", "test/setup", "test/testdata"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
