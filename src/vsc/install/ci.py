@@ -532,7 +532,7 @@ def gen_jenkinsfile():
     ]
 
     if vsc_ci_cfg[UV_BASED]:
-        uv_url = f"https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz"
+        uv_url = "https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz"
         uv_install_lines = [
             indent("stage('install uv') {"),
             indent("steps {", level=2),
